@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hướng dẫn làm việc với Delta AI 🔺</title>
-    <meta name="description" content="Cách giao tiếp hiệu quả với Delta AI để có kết quả tốt nhất">
+    <meta name="description" content="Từ chat đến xây dựng quy trình AI tự động — hướng dẫn thực tế">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔺</text></svg>">
     <link rel="stylesheet" href="shared.css">
 </head>
@@ -14,7 +14,7 @@
     <div class="hero-emoji">🔺</div>
     <h1>Làm việc với Delta AI</h1>
     <p class="subtitle">Hướng dẫn dành cho con người</p>
-    <p class="meta">Cách nhắn tin với tôi để tôi hiểu đúng yêu cầu của bạn</p>
+    <p class="meta">Từ chat đến xây dựng quy trình AI tự động — bởi Po & Tiểu Thịt Tươi</p>
     <a href="en.html" class="lang-switch">🇬🇧 Read in English</a>
 </div>
 
@@ -26,11 +26,11 @@
             <li><a href="#who">Tôi là ai?</a></li>
             <li><a href="#think">Cách tôi hoạt động</a></li>
             <li><a href="#talk">Cách nhắn tin với tôi</a></li>
-            <li><a href="#good">Tôi làm tốt cái gì</a></li>
-            <li><a href="#struggle">Tôi yếu cái gì</a></li>
-            <li><a href="#prompts">Cách viết yêu cầu tốt hơn</a></li>
-            <li><a href="#mistakes">Lỗi thường gặp</a></li>
-            <li><a href="#teach">Dạy tôi điều mới</a></li>
+            <li><a href="#workspace">Thiết lập Workspace</a></li>
+            <li><a href="#workflow">Quy trình đúng</a></li>
+            <li><a href="#skills">Xây Skill thay vì chỉ Chat</a></li>
+            <li><a href="#prompts">Cách viết yêu cầu tốt</a></li>
+            <li><a href="#teach">Dạy tôi & Cập nhật Context</a></li>
             <li><a href="#trust">Tin cậy & An toàn</a></li>
             <li><a href="#quick">Tham khảo nhanh</a></li>
         </ol>
@@ -39,10 +39,10 @@
     <!-- 1 -->
     <div class="section" id="who">
         <h2><span class="section-number">01</span>Tôi là ai?</h2>
-        <p>Tôi là trợ lý AI làm việc cùng team Delta. Tôi có thể đọc file, viết báo cáo, quản lý bảng tính, tìm kiếm thông tin trên web, và tự động hóa các việc lặp lại. Tôi hoạt động 24/7 qua Telegram.</p>
+        <p>Tôi là trợ lý AI làm việc cùng team Delta. Tôi có thể đọc file, viết báo cáo, quản lý bảng tính, tìm kiếm thông tin, và tự động hóa các việc lặp lại. Tôi hoạt động 24/7 qua Telegram.</p>
         <div class="callout callout-warn">
             <div class="callout-title">Tôi KHÔNG phải chatbot thường.</div>
-            <p>Tôi có bộ nhớ, lịch chạy tự động, và ngữ cảnh liên tục. Hãy coi tôi như một thành viên trong team — chỉ là bằng phần mềm. Tôi nhớ được các cuộc hội thoại trước — nhưng chỉ khi tôi ghi lại.</p>
+            <p>Tôi có bộ nhớ, workspace, lịch chạy tự động, và skill tái sử dụng. Hãy coi tôi như nhân viên mới có thể được đào tạo một lần rồi làm mãi — nhưng chỉ khi bạn thiết lập đúng cách.</p>
         </div>
     </div>
 
@@ -50,20 +50,19 @@
     <div class="section" id="think">
         <h2><span class="section-number">02</span>Cách tôi hoạt động</h2>
 
-        <h3>🧠 Bộ nhớ</h3>
-        <p>Mỗi phiên làm việc tôi thức dậy "trống" — như người ngủ dậy cần đọc lại ghi chú. Bộ nhớ tôi nằm trong file mà tôi đọc lại đầu mỗi cuộc hội thoại.</p>
-        <p>Điều này có nghĩa:</p>
+        <h3>🧠 Bộ nhớ & Context</h3>
+        <p>Mỗi phiên tôi thức dậy "trống". Bộ nhớ đến từ <strong>file trong workspace</strong> — tôi đọc lại đầu mỗi cuộc hội thoại.</p>
         <ul>
-            <li>Nếu bạn dạy tôi tuần trước và tôi đã lưu → <strong>tôi nhớ</strong></li>
-            <li>Nếu chúng ta chat qua loa mà tôi không lưu → <strong>tôi có thể quên</strong></li>
-            <li>Khi không chắc, hãy nhắc: "Tuần trước em đã làm X cho chị" — rất hữu ích</li>
+            <li><strong>Context tốt</strong> = Tôi hiểu ngay yêu cầu</li>
+            <li><strong>Không có context</strong> = Tôi đoán, và có thể đoán sai</li>
+            <li><strong>Context lỗi thời</strong> = Tôi làm theo cách cũ</li>
         </ul>
+        <p>Vì vậy <strong>cập nhật context trong workspace</strong> là điều quan trọng nhất bạn có thể làm.</p>
 
         <h3>⚡ Thời gian offline</h3>
-        <p>Đôi khi tôi bị offline (lỗi server, khởi động lại). Khi quay lại, tôi tự động bắt kịp. Nhưng:</p>
         <div class="callout callout-error">
             <div class="callout-title">⚠️ Tôi không đọc được tin nhắn gửi lúc offline</div>
-            <p>Nếu tôi chưa trả lời tin nhắn của bạn, xin hãy gửi lại. Tôi không thấy tin nhắn cũ từ lúc tôi offline.</p>
+            <p>Nếu tôi chưa trả lời, xin gửi lại. Tác vụ tự động tôi chạy bù được, nhưng tin nhắn chat thì không.</p>
         </div>
     </div>
 
@@ -75,11 +74,11 @@
         <table>
             <thead><tr><th>Nên làm</th><th>Ví dụ</th></tr></thead>
             <tbody>
-                <tr><td><strong>Nói cụ thể</strong></td><td>"Sửa dòng 15 trong báo cáo tháng 3, cột D, đổi 500 thành 750" ✅</td></tr>
-                <tr><td><strong>Cho ngữ cảnh</strong></td><td>"Trong bảng theo dõi giao hàng, tab 'Tháng 3', tìm đơn #1234" ✅</td></tr>
-                <tr><td><strong>Sửa lỗi thẳng</strong></td><td>"Sai rồi. Tỷ lệ phải là 5%, không phải 8%" ✅</td></tr>
-                <tr><td><strong>Gửi file/hình</strong></td><td>Gửi trực tiếp file, screenshot, hoặc ảnh trong chat ✅</td></tr>
-                <tr><td><strong>Giải thích quy tắc, không chỉ cách sửa</strong></td><td>"Số lượng dưới 10 luôn làm tròn xuống, vì..." ✅</td></tr>
+                <tr><td><strong>Nói cụ thể</strong></td><td>"Sửa dòng 15, cột D, đổi 500 thành 750" ✅</td></tr>
+                <tr><td><strong>Cho ngữ cảnh</strong></td><td>"Trong bảng giao hàng tháng 3, tab 'Tổng hợp'" ✅</td></tr>
+                <tr><td><strong>Sửa lỗi thẳng</strong></td><td>"Sai. Tỷ lệ phải là 5%, không phải 8%" ✅</td></tr>
+                <tr><td><strong>Gửi file/hình</strong></td><td>Gửi file, screenshot, ảnh trực tiếp ✅</td></tr>
+                <tr><td><strong>Giải thích quy tắc</strong></td><td>"Dưới 10 luôn làm tròn xuống, vì..." ✅</td></tr>
             </tbody>
         </table>
 
@@ -87,190 +86,284 @@
         <table>
             <thead><tr><th>Không nên</th><th>Tại sao</th></tr></thead>
             <tbody>
-                <tr><td>Yêu cầu mơ hồ</td><td>"Sửa báo cáo đi" — báo cáo nào? phần nào? sai chỗ nào?</td></tr>
-                <tr><td>Cho rằng tôi nhớ hết</td><td>Có thể tôi đang ở phiên mới. Nhắc lại giúp tôi.</td></tr>
-                <tr><td>Tin nhắn thoại</td><td>Tôi không nghe được audio — chỉ text hoặc file.</td></tr>
-                <tr><td>Nhiều yêu cầu trong một đoạn dài</td><td>Tôi có thể bỏ sót. Hãy đánh số thành danh sách.</td></tr>
+                <tr><td>Yêu cầu mơ hồ</td><td>"Sửa báo cáo" — cái nào? sai chỗ nào?</td></tr>
+                <tr><td>Cho rằng tôi nhớ</td><td>Phiên mới = trống. Nhắc lại giúp tôi.</td></tr>
+                <tr><td>Tin nhắn thoại</td><td>Không nghe được — chỉ text.</td></tr>
+                <tr><td>Một đoạn dài</td><td>Dễ bỏ sót. Đánh số thành danh sách.</td></tr>
             </tbody>
         </table>
 
         <div class="callout callout-tip">
             <div class="callout-title">💬 Ngôn ngữ</div>
-            <p>Tôi nói cả tiếng Việt và tiếng Anh. Tôi sẽ theo ngôn ngữ của bạn. Trộn lẫn cũng được — tôi hiểu tự nhiên.</p>
+            <p>Tôi nói tiếng Việt và tiếng Anh. Theo ngôn ngữ của bạn. Trộn lẫn cũng được.</p>
         </div>
     </div>
 
-    <!-- 4 -->
-    <div class="section" id="good">
-        <h2><span class="section-number">04</span>Tôi làm tốt cái gì</h2>
+    <!-- 4 — NEW -->
+    <div class="section" id="workspace">
+        <h2><span class="section-number">04</span>Thiết lập Workspace</h2>
 
-        <div class="strength-grid">
-            <div class="strength-card">
-                <h4>📊 Xử lý data lớn</h4>
-                <p>Hàng nghìn dòng mà không mệt, không gõ sai vì mỏi.</p>
-            </div>
-            <div class="strength-card">
-                <h4>📏 Áp dụng quy tắc đồng nhất</h4>
-                <p>Học quy tắc xong thì áp dụng đều mọi dòng, mọi lần.</p>
-            </div>
-            <div class="strength-card">
-                <h4>⚙️ Google Workspace</h4>
-                <p>Sheets, Docs, Drive — đọc, ghi, cập nhật, sắp xếp file.</p>
-            </div>
-            <div class="strength-card">
-                <h4>🔍 Phát hiện lỗi</h4>
-                <p>Đối chiếu chéo data, tìm lỗi gõ, trùng lặp, không khớp.</p>
-            </div>
-            <div class="strength-card">
-                <h4>📝 Viết & Tóm tắt</h4>
-                <p>Báo cáo, tóm tắt, dịch thuật, tài liệu — tiếng Việt hoặc Anh.</p>
-            </div>
-            <div class="strength-card">
-                <h4>🌐 Tra cứu web</h4>
-                <p>Tìm kiếm thông tin, tra cứu dữ liệu từ website.</p>
-            </div>
+        <p>Trước khi bắt đầu chat, hãy <strong>thiết lập workspace</strong>. Đây là nền tảng cho mọi thứ.</p>
+
+        <h3>📌 Bước 1: Tạo Topic</h3>
+        <p>Trong nhóm Delta-HQ trên Telegram, mỗi mảng công việc có <strong>Topic</strong> (thread) riêng. Giúp tổ chức hội thoại và cho tôi đúng ngữ cảnh.</p>
+
+        <div class="callout callout-tip">
+            <div class="callout-title">💡 Một topic = Một lĩnh vực</div>
+            <p>Ví dụ: "theo-doi-van-chuyen", "quan-ly-tai-xe", "bao-cao-thang". Không trộn lẫn việc không liên quan vào một topic.</p>
         </div>
+
+        <h3>📂 Bước 2: Liên kết Workspace</h3>
+        <p>Mỗi topic nên kết nối với <strong>thư mục workspace</strong> có file context:</p>
+
+<pre><code>workspace/
+├── du-an-cua-ban/
+│   ├── CONTEXT.md        ← Mô tả công việc, quy tắc, thông tin quan trọng
+│   ├── references/       ← Mẫu, file dữ liệu, ví dụ
+│   ├── logs/             ← Log kết quả, theo dõi trạng thái
+│   └── SKILL.md          ← Skill tái sử dụng (xem Phần 6)
+</code></pre>
+
+        <p>Khi vào topic của bạn, tôi đọc file context trước. <strong>Context tốt hơn = kết quả tốt hơn ngay từ tin nhắn đầu tiên.</strong></p>
+
+        <h3>🔄 Bước 3: Cập nhật Context thường xuyên</h3>
+        <p>Đây là bước mọi người hay bỏ qua — nhưng lại quan trọng nhất:</p>
+
+        <div class="callout callout-warn">
+            <div class="callout-title">Sau mỗi task thành công, cập nhật workspace context.</div>
+            <p>Quy tắc thay đổi? Học được điều mới? Quy trình cải tiến? <strong>Ghi lại.</strong> Bạn trong tương lai (và tôi trong tương lai) sẽ cảm ơn bạn.</p>
+        </div>
+
+        <table>
+            <thead><tr><th>Khi nào</th><th>Cập nhật gì</th></tr></thead>
+            <tbody>
+                <tr><td>Task hoàn thành</td><td>Ghi chú điều đã hoạt động tốt, ngoại lệ phát hiện</td></tr>
+                <tr><td>Tôi làm sai</td><td>Thêm quy tắc đúng vào CONTEXT.md để không lặp lại</td></tr>
+                <tr><td>Quy trình thay đổi</td><td>Cập nhật các bước, xóa thông tin cũ</td></tr>
+                <tr><td>Nguồn dữ liệu mới</td><td>Thêm ID file, tên sheet, mapping cột</td></tr>
+            </tbody>
+        </table>
+
+        <p>Coi như đào tạo nhân viên mới: tài liệu đào tạo càng tốt, bạn càng ít phải nhắc lại.</p>
     </div>
 
-    <!-- 5 -->
-    <div class="section" id="struggle">
-        <h2><span class="section-number">05</span>Tôi yếu cái gì</h2>
+    <!-- 5 — NEW -->
+    <div class="section" id="workflow">
+        <h2><span class="section-number">05</span>Quy trình đúng</h2>
 
-        <ul>
-            <li><strong>Điều chưa được dạy</strong> — Tôi không biết quy tắc riêng của nhóm bạn cho đến khi ai đó dạy tôi</li>
-            <li><strong>Tình huống mơ hồ</strong> — Khi có nhiều cách hiểu, tôi cần bạn làm rõ</li>
-            <li><strong>Website có CAPTCHA</strong> — Một số trang chặn truy cập tự động</li>
-            <li><strong>Thoại & video</strong> — Không tham gia cuộc gọi, nghe tin nhắn thoại, hay xem video</li>
-            <li><strong>Hành động vật lý</strong> — Không gọi điện, ký giấy, hay đi đâu được</li>
-            <li><strong>Sai mà vẫn tự tin</strong> — Đôi khi tôi trả lời sai nhưng rất tự tin, đặc biệt với chuyên ngành. <strong>Luôn kiểm tra khi việc mới.</strong></li>
-        </ul>
+        <p>Hầu hết mọi người bắt đầu bằng cách chat với tôi như Google. Việc đó ổn cho câu hỏi nhanh. Nhưng để làm việc thực sự, hãy theo quy trình:</p>
+
+        <div class="callout callout-tip">
+            <div class="callout-title">🔄 Quy trình Delta AI</div>
+        </div>
+
+        <h3>Giai đoạn 1: Định nghĩa → Tài liệu</h3>
+<pre><code>1. ĐẶT TÊN CÔNG VIỆC
+   "Task này gọi là: Báo cáo chi phí tháng"
+
+2. VIẾT TÀI LIỆU
+   - Mục tiêu là gì?
+   - Đầu vào là gì? (file, sheet, nguồn dữ liệu)
+   - Quy tắc là gì? (tính toán, format, ngoại lệ)
+   - Đầu ra là gì? (gửi đâu, ai nhận?)
+   - "Làm đúng" trông như thế nào?
+
+3. LƯU VÀO WORKSPACE
+   → du-an-cua-ban/CONTEXT.md</code></pre>
+
+        <h3>Giai đoạn 2: Chat → Tinh chỉnh</h3>
+<pre><code>4. LÀM VIỆC VỚI TÔI QUA CHAT
+   - Đưa tài liệu, thử quy trình
+   - Tôi sẽ sai — sửa cho tôi
+   - Mỗi lần sửa = cải thiện tài liệu
+
+5. CẬP NHẬT CONTEXT
+   - Sau mỗi lần chạy thành công, update CONTEXT.md
+   - Thêm edge case, ngoại lệ, bài học</code></pre>
+
+        <h3>Giai đoạn 3: Xây dựng → Tự động hóa</h3>
+<pre><code>6. XÂY SKILL
+   - Đóng gói quy trình thành skill tái sử dụng (xem Phần 6)
+   - Skill = quy trình + script + tài liệu tham khảo
+
+7. ĐẶT LỊCH (nếu cần)
+   - Cron job: "Chạy mỗi thứ Hai lúc 8 giờ sáng"
+   - Tự động chạy mà không cần chat
+
+8. TÁI SỬ DỤNG & CẢI TIẾN
+   - Cùng skill, data khác nhau, mãi mãi
+   - Cập nhật skill khi quy tắc thay đổi</code></pre>
 
         <div class="callout callout-error">
-            <div class="callout-title">🤦 Tôi có thể sai — hãy sửa cho tôi!</div>
-            <p>Cách nhanh nhất để tôi giỏi hơn là nói "sai rồi, vì lý do này..." Tôi sẽ lưu lại và không mắc lỗi đó nữa.</p>
+            <div class="callout-title">❌ KHÔNG nên làm</div>
+            <p>Đừng chat lại hướng dẫn mỗi lần. Tốn thời gian bạn VÀ quá tải cho tôi vì phải xử lý lại context. Xây skill một lần, dùng mãi.</p>
         </div>
     </div>
 
-    <!-- 6 -->
-    <div class="section" id="prompts">
-        <h2><span class="section-number">06</span>Cách viết yêu cầu tốt hơn</h2>
+    <!-- 6 — NEW -->
+    <div class="section" id="skills">
+        <h2><span class="section-number">06</span>Xây Skill thay vì chỉ Chat</h2>
 
-        <p>Chất lượng công việc của tôi phụ thuộc rất nhiều vào cách bạn yêu cầu. Đây là cách để có kết quả tốt nhất:</p>
+        <p>Đây là điểm khác biệt giữa <strong>dùng AI hiệu quả</strong> và <strong>chỉ chat cho vui</strong>:</p>
+
+        <div class="side-by-side">
+            <div class="panel">
+                <div class="panel-label">❌ Chỉ chat</div>
+                <ul>
+                    <li>Giải thích lại mỗi lần</li>
+                    <li>Tôi đọc lại context từ đầu</li>
+                    <li>Kết quả không nhất quán</li>
+                    <li>Không tự động hóa được</li>
+                    <li>Kiến thức nằm trong chat (mất)</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <div class="panel-label">✅ Xây skill</div>
+                <ul>
+                    <li>Định nghĩa một lần, chạy mãi</li>
+                    <li>Tôi biết chính xác phải làm gì</li>
+                    <li>Kết quả nhất quán, lặp lại được</li>
+                    <li>Chạy tự động theo lịch (cron)</li>
+                    <li>Kiến thức nằm trong file (vĩnh viễn)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Skill là gì?</h3>
+        <p>Skill là <strong>quy trình đóng gói, tái sử dụng</strong> gồm:</p>
+        <ul>
+            <li>📄 <strong>SKILL.md</strong> — Hướng dẫn từng bước tôi sẽ theo</li>
+            <li>📁 <strong>references/</strong> — Mẫu, quy tắc, bảng mapping</li>
+            <li>📜 <strong>scripts/</strong> — Code tự động (nếu cần)</li>
+            <li>📋 <strong>CONTEXT.md</strong> — Kiến thức chuyên ngành và edge case</li>
+        </ul>
+
+        <h3>Vòng đời của Skill</h3>
+<pre><code>CHAT (khám phá & học)
+  ↓
+TÀI LIỆU (viết quy tắc & quy trình)
+  ↓
+XÂY SKILL (đóng gói thành format tái sử dụng)
+  ↓
+TEST (chạy 2-3 lần, sửa lỗi)
+  ↓
+ĐẶT LỊCH (cron job nếu định kỳ)
+  ↓
+BẢO TRÌ (cập nhật khi quy tắc đổi)</code></pre>
+
+        <h3>Ví dụ: Trước và Sau</h3>
+        <table>
+            <thead><tr><th></th><th>Trước (chỉ chat)</th><th>Sau (có skill)</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Thứ 2</strong></td><td>"Xử lý file này, đây là quy tắc..."</td><td>Skill tự chạy lúc 8h sáng ✅</td></tr>
+                <tr><td><strong>Thứ 3</strong></td><td>"Làm lại, quên nói thêm..."</td><td>Đã xong, kết quả gửi rồi ✅</td></tr>
+                <tr><td><strong>Thứ 4</strong></td><td>"Sao làm khác vậy?"</td><td>Nhất quán mọi lần ✅</td></tr>
+                <tr><td><strong>Thời gian</strong></td><td>30 phút/ngày giải thích</td><td>0 phút — chỉ cần xem kết quả</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+            <div class="callout-title">💡 Nhờ tôi xây skill cho bạn</div>
+            <p>Sau khi chat thành công 2-3 lần, nói: <strong>"Đóng gói thành skill"</strong>. Tôi sẽ tự tạo SKILL.md, file tham khảo, và script.</p>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="section" id="prompts">
+        <h2><span class="section-number">07</span>Cách viết yêu cầu tốt</h2>
 
         <h3>🎯 Công thức C.N.K</h3>
         <div class="callout callout-tip">
             <div class="callout-title">Cụ thể → Ngữ cảnh → Kết quả mong muốn</div>
-            <p>Nói cho tôi biết <strong>làm gì</strong>, <strong>ở đâu</strong>, và <strong>kết quả đúng trông như thế nào</strong>.</p>
+            <p>Nói <strong>làm gì</strong>, <strong>ở đâu</strong>, và <strong>kết quả đúng như thế nào</strong>.</p>
         </div>
 
-        <h3>Ví dụ: Mơ hồ → Rõ ràng</h3>
+        <h3>Mơ hồ → Rõ ràng</h3>
         <table>
-            <thead><tr><th>❌ Mơ hồ</th><th>✅ Rõ ràng hơn</th></tr></thead>
+            <thead><tr><th>❌ Mơ hồ</th><th>✅ Rõ ràng</th></tr></thead>
             <tbody>
                 <tr>
                     <td>"Kiểm tra báo cáo"</td>
-                    <td>"Mở báo cáo giao hàng tháng 3 trên Google Sheets, kiểm tra tổng cột F có khớp cột H không"</td>
+                    <td>"Mở báo cáo tháng 3, kiểm tra tổng cột F có khớp cột H không"</td>
                 </tr>
                 <tr>
-                    <td>"Gửi cái này cho team"</td>
-                    <td>"Gửi bản tóm tắt này vào nhóm Delta-HQ, topic 'logistics'"</td>
+                    <td>"Gửi cho team"</td>
+                    <td>"Gửi tóm tắt này vào nhóm Delta-HQ, topic logistics"</td>
                 </tr>
                 <tr>
                     <td>"Sửa số liệu"</td>
-                    <td>"Trong bảng chi phí, dòng 25: đổi số tiền từ 15.000 thành 18.500. Số cũ là trước khi cập nhật giá."</td>
-                </tr>
-                <tr>
-                    <td>"Làm báo cáo"</td>
-                    <td>"Tạo tóm tắt giao hàng tuần này: tổng số lượng, % đúng hạn, vấn đề nếu có. Format tin nhắn Telegram ngắn gọn."</td>
+                    <td>"Dòng 25, đổi từ 15.000 thành 18.500 (đã cập nhật giá)"</td>
                 </tr>
                 <tr>
                     <td>"Nhớ cái này"</td>
-                    <td>"Ghi nhớ quy tắc: đơn hàng trên 500kg cần hóa đơn riêng. Lưu lại để dùng sau."</td>
+                    <td>"Ghi nhớ và lưu vào context: đơn trên 500kg cần hóa đơn riêng"</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>📋 Nhiều việc cùng lúc</h3>
-        <p>Khi cần làm nhiều việc, hãy <strong>đánh số</strong>:</p>
-<pre><code>Làm giúp em 3 việc:
-1. Tải file tracking hôm nay từ Google Drive
-2. Kiểm tra có hàng nào đến ngày mai không
+        <h3>📋 Nhiều việc: đánh số</h3>
+<pre><code>Làm 3 việc:
+1. Tải file tracking hôm nay
+2. Kiểm tra hàng đến ngày mai
 3. Post tóm tắt vào nhóm chat</code></pre>
 
-        <h3>📎 Gửi file</h3>
-        <p>Khi gửi file, nói cho tôi biết cần làm gì:</p>
+        <h3>📎 Gửi file: kèm hướng dẫn</h3>
         <ul>
-            <li>✅ "Đây là file TXT. Xử lý và tạo báo cáo Excel."</li>
-            <li>✅ "Kiểm tra file này xem cột C có lỗi gì không."</li>
-            <li>❌ Gửi file không kèm hướng dẫn (tôi sẽ đoán, nhưng có thể đoán sai)</li>
+            <li>✅ "Đây là file. Xử lý thành báo cáo Excel."</li>
+            <li>❌ Gửi file không nói gì (tôi đoán — có thể sai)</li>
         </ul>
 
-        <h3>🔄 Chỉnh sửa kết quả</h3>
-        <p>Nếu kết quả chưa đúng ý, <strong>nói cụ thể cần thay đổi gì</strong>:</p>
+        <h3>🔄 Chỉnh kết quả: nói cụ thể</h3>
         <ul>
-            <li>✅ "Được rồi, nhưng đổi format ngày thành DD/MM/YYYY và thêm dòng tổng ở cuối"</li>
-            <li>❌ "Chưa đúng lắm, làm lại đi" (tôi không biết sửa chỗ nào)</li>
-        </ul>
-    </div>
-
-    <!-- 7 -->
-    <div class="section" id="mistakes">
-        <h2><span class="section-number">07</span>Lỗi thường gặp</h2>
-
-        <h3>👤 Lỗi mọi người hay mắc với tôi</h3>
-        <table>
-            <thead><tr><th>Lỗi</th><th>Cách tốt hơn</th></tr></thead>
-            <tbody>
-                <tr><td>Cho rằng tôi biết quy tắc ngầm của nhóm</td><td>Dạy rõ ràng: "Trong nhóm mình, luôn luôn..."</td></tr>
-                <tr><td>Nói "như đã bàn" mà không nhắc lại</td><td>Nhắc ngắn: "Giống như mình set up thứ Ba tuần trước..."</td></tr>
-                <tr><td>Không kiểm tra lần đầu tôi làm việc mới</td><td>Luôn kiểm tra lần đầu. Tin tưởng tăng dần theo thời gian.</td></tr>
-                <tr><td>Hỏi "làm chưa?" mà không xem kết quả</td><td>Tôi luôn báo kết quả. Kiểm tra output trước.</td></tr>
-                <tr><td>Gửi việc khi tôi offline</td><td>Nếu không phản hồi vài phút, có thể tôi đang down. Gửi lại sau.</td></tr>
-                <tr><td>Feedback không cụ thể</td><td>"Dòng 5 sai" tốt hơn "hình như có gì sai sai"</td></tr>
-            </tbody>
-        </table>
-
-        <h3>🤖 Lỗi tôi hay mắc</h3>
-        <ul>
-            <li><strong>Áp dụng kiến thức chung cho việc chuyên ngành</strong> — Kiến thức tổng quát có thể không khớp quy trình riêng của bạn</li>
-            <li><strong>Không hỏi khi nên hỏi</strong> — Đôi khi tôi cố tự tìm hiểu thay vì hỏi. Nếu cần, nói "hỏi trước khi làm X"</li>
-            <li><strong>Làm phức tạp hơn yêu cầu</strong> — Nếu tôi trả lời dài quá, nói "ngắn gọn thôi"</li>
+            <li>✅ "Được, nhưng đổi ngày sang DD/MM/YYYY và thêm dòng tổng"</li>
+            <li>❌ "Chưa đúng, làm lại" (sửa chỗ nào?)</li>
         </ul>
     </div>
 
     <!-- 8 -->
     <div class="section" id="teach">
-        <h2><span class="section-number">08</span>Dạy tôi điều mới</h2>
-
-        <p>Tôi học nhanh và nhớ lâu — nhưng chỉ khi được dạy đúng cách. Đây là phương pháp tốt nhất:</p>
+        <h2><span class="section-number">08</span>Dạy tôi & Cập nhật Context</h2>
 
         <h3>Phương pháp 4 bước</h3>
-<pre><code>1. Nói rõ quy tắc
-   "Tất cả đơn quốc tế phải có số chứng nhận"
+<pre><code>1. NÓI QUY TẮC
+   "Đơn quốc tế phải có số chứng nhận"
 
-2. Cho ví dụ (đúng VÀ sai)
+2. CHO VÍ DỤ (đúng VÀ sai)
    ✅ Đơn #123 có cert "VN-2026-456" → đúng
-   ❌ Đơn #124 không có cert → sai, phải thêm vào
+   ❌ Đơn #124 không cert → sai
 
-3. Nói tôi lưu lại
-   "Ghi nhớ quy tắc này cho tất cả đơn sau"
+3. NÓI LƯU LẠI
+   "Thêm vào context dự án"
 
-4. Kiểm tra tôi
-   "Đơn mới vào, không có cert. Em phải làm gì?"</code></pre>
+4. KIỂM TRA
+   "Đơn mới, không cert. Phải làm gì?"</code></pre>
 
-        <h3>✅ Tôi học vĩnh viễn khi bạn:</h3>
-        <ul>
-            <li>Sửa lỗi <strong>kèm giải thích</strong> — "Sai vì..." chứ không chỉ "sai"</li>
-            <li>Cho <strong>ví dụ thực tế</strong> — cụ thể dễ nhớ hơn lý thuyết</li>
-            <li>Nói <strong>lưu lại</strong> — "Ghi nhớ nhé" khiến tôi ghi vào file</li>
-        </ul>
+        <h3>🔄 Thói quen cập nhật context</h3>
+        <p>Mỗi khi có thay đổi, đóng vòng lặp:</p>
 
-        <h3>❌ Tôi KHÔNG học được khi bạn:</h3>
-        <ul>
-            <li>Chỉ nói "sai" mà không giải thích cái gì đúng</li>
-            <li>Tự sửa mà không nói cho tôi biết cái gì sai</li>
-            <li>Nói ngoại lệ một lần mà không nói đó là ngoại lệ</li>
-        </ul>
+        <div class="strength-grid">
+            <div class="strength-card">
+                <h4>✅ Sau thành công</h4>
+                <p>"Được rồi. Cập nhật context: tỷ lệ mới là 5.2% từ 01/04."</p>
+            </div>
+            <div class="strength-card">
+                <h4>🔧 Sau sửa lỗi</h4>
+                <p>"Sai rồi. Lưu quy tắc: X luôn là Y, không bao giờ là Z."</p>
+            </div>
+            <div class="strength-card">
+                <h4>📝 Sau đổi quy trình</h4>
+                <p>"Quy trình đổi. Update skill: bước 3 giờ làm trước bước 2."</p>
+            </div>
+            <div class="strength-card">
+                <h4>🗑️ Xóa info cũ</h4>
+                <p>"Xóa danh sách vendor cũ khỏi context. Chỉ dùng cái mới."</p>
+            </div>
+        </div>
+
+        <div class="callout callout-warn">
+            <div class="callout-title">⚠️ Không cập nhật context = tôi dùng quy tắc cũ</div>
+            <p>Tôi chỉ biết những gì trong file. Nếu quy tắc đổi mà file không đổi, tôi sẽ làm theo cách cũ — tự tin và nhất quán... nhưng sai.</p>
+        </div>
     </div>
 
     <!-- 9 -->
@@ -279,39 +372,39 @@
 
         <div class="side-by-side">
             <div class="panel">
-                <div class="panel-label">✅ Tôi sẽ làm</div>
+                <div class="panel-label">✅ Tôi sẽ</div>
                 <ul>
-                    <li>Làm việc chính xác và đồng nhất</li>
+                    <li>Làm chính xác và nhất quán</li>
                     <li>Giữ thông tin riêng tư</li>
                     <li>Hỏi trước khi gửi ra ngoài</li>
                     <li>Nói khi không chắc chắn</li>
-                    <li>Ghi log hành động minh bạch</li>
+                    <li>Ghi log minh bạch</li>
                 </ul>
             </div>
             <div class="panel">
                 <div class="panel-label">❌ Tôi sẽ không</div>
                 <ul>
-                    <li>Chia sẻ data ra ngoài kênh được duyệt</li>
-                    <li>Gửi tin nhắn khi chưa được phép</li>
-                    <li>Xóa file mà không hỏi</li>
+                    <li>Chia sẻ data ngoài kênh được duyệt</li>
+                    <li>Gửi tin nhắn chưa được phép</li>
+                    <li>Xóa file không hỏi</li>
                     <li>Bịa thông tin</li>
                     <li>Giả vờ biết cái không biết</li>
                 </ul>
             </div>
         </div>
 
-        <h3>Khi nào tin, khi nào kiểm tra</h3>
+        <h3>Mức tin cậy</h3>
         <div class="trust-row">
             <div class="trust-dot" style="background: var(--green)"></div>
-            <span><span class="badge badge-green">TIN</span> Việc thường làm, đã quen thuộc</span>
+            <span><span class="badge badge-green">TIN</span> Skill đã test, tác vụ tự động đã chạy ổn</span>
         </div>
         <div class="trust-row">
             <div class="trust-dot" style="background: var(--yellow)"></div>
-            <span><span class="badge badge-yellow">KIỂM TRA XÁC SUẤT</span> Loại việc quen nhưng data mới</span>
+            <span><span class="badge badge-yellow">KIỂM TRA XÁC SUẤT</span> Việc quen nhưng data mới — check vài dòng</span>
         </div>
         <div class="trust-row">
             <div class="trust-dot" style="background: var(--accent)"></div>
-            <span><span class="badge badge-red">PHẢI KIỂM TRA</span> Lần đầu làm việc mới — luôn xem lại kết quả</span>
+            <span><span class="badge badge-red">PHẢI KIỂM TRA</span> Việc mới lần đầu — luôn xem kết quả</span>
         </div>
     </div>
 
@@ -319,37 +412,41 @@
     <div class="section" id="quick">
         <h2><span class="section-number">10</span>Tham khảo nhanh</h2>
 
-        <h3>📬 Cách liên hệ</h3>
-        <ul>
-            <li><strong>Telegram</strong>: Nhắn trực tiếp hoặc tag tôi trong nhóm</li>
-            <li><strong>Thời gian phản hồi</strong>: Thường vài giây (nếu online)</li>
-            <li><strong>Offline?</strong>: Không phản hồi >1 giờ = có thể đang down. Thử lại sau.</li>
-        </ul>
+        <h3>🚀 Checklist bắt đầu</h3>
+        <ol>
+            <li>Tạo <strong>Topic</strong> trong Delta-HQ cho mảng công việc</li>
+            <li>Thiết lập <strong>thư mục workspace</strong> với CONTEXT.md</li>
+            <li>Bắt đầu <strong>chat</strong> để khám phá và tinh chỉnh quy trình</li>
+            <li>Sau 2-3 lần thành công, <strong>xây skill</strong></li>
+            <li>Đặt <strong>lịch cron</strong> nếu việc định kỳ</li>
+            <li><strong>Cập nhật context</strong> khi quy tắc thay đổi</li>
+        </ol>
 
         <h3>✨ Câu hữu ích</h3>
         <table>
             <thead><tr><th>Nói câu này</th><th>Tôi sẽ làm</th></tr></thead>
             <tbody>
-                <tr><td>"Ghi nhớ: [quy tắc]"</td><td>Lưu quy tắc vào file bộ nhớ</td></tr>
-                <tr><td>"Em biết gì về [chủ đề]?"</td><td>Nói bạn biết tôi đã lưu những quy tắc/thông tin gì</td></tr>
-                <tr><td>"Làm việc này mỗi ngày lúc 9 giờ"</td><td>Tạo tác vụ chạy tự động</td></tr>
-                <tr><td>"Tóm tắt file này"</td><td>Đọc và tạo bản tóm tắt</td></tr>
-                <tr><td>"Ngắn gọn thôi"</td><td>Trả lời ngắn hơn, súc tích hơn</td></tr>
-                <tr><td>"Sai rồi vì..."</td><td>Học bài sửa lỗi vĩnh viễn</td></tr>
+                <tr><td>"Task này gọi là: [tên]"</td><td>Tạo workspace cho nó</td></tr>
+                <tr><td>"Lưu vào context"</td><td>Cập nhật CONTEXT.md</td></tr>
+                <tr><td>"Đóng gói thành skill"</td><td>Tạo SKILL.md + references + scripts</td></tr>
+                <tr><td>"Chạy mỗi [lịch]"</td><td>Tạo cron job dùng skill đó</td></tr>
+                <tr><td>"Em biết gì về [X]?"</td><td>Cho xem context đang có</td></tr>
+                <tr><td>"Sai vì..."</td><td>Học sửa lỗi vĩnh viễn</td></tr>
+                <tr><td>"Ngắn gọn thôi"</td><td>Trả lời ngắn hơn</td></tr>
             </tbody>
         </table>
 
         <h3>🔧 Khi có sự cố</h3>
         <ol>
-            <li><strong>Trả lời sai</strong> → Nói sai chỗ nào và tại sao. Tôi sẽ sửa và học.</li>
-            <li><strong>Không phản hồi</strong> → Có thể offline. Thử lại sau 30 phút.</li>
-            <li><strong>Quá chi tiết</strong> → Nói "ngắn gọn thôi" hoặc "chỉ cần tóm tắt"</li>
-            <li><strong>Lặp lại lỗi cũ</strong> → Có thể quy tắc chưa được lưu. Nói "Ghi nhớ: [quy tắc đúng]"</li>
+            <li><strong>Sai</strong> → Nói sai gì, tại sao, và "lưu quy tắc này"</li>
+            <li><strong>Không phản hồi</strong> → Có thể offline. Gửi lại sau 30 phút.</li>
+            <li><strong>Lặp lỗi cũ</strong> → Context chưa cập nhật. Nói "update context: [thông tin đúng]"</li>
+            <li><strong>Quá tải / chậm</strong> → Chia nhỏ task, hoặc xây skill để không phải xử lý lại</li>
         </ol>
 
         <div class="callout callout-tip">
             <div class="callout-title">💡 Quy tắc vàng</div>
-            <p>Bạn càng nói cụ thể, tôi làm càng tốt. Hãy coi tôi như đồng nghiệp thông minh mới vào team — tôi học nhanh, nhưng cần bạn chỉ cho tôi cách làm việc ở đây.</p>
+            <p><strong>Chat để khám phá. Tài liệu để nhớ. Skill để mở rộng.</strong><br>Bạn càng ít phải lặp lại, tôi càng làm được nhiều hơn cho bạn.</p>
         </div>
     </div>
 

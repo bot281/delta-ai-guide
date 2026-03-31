@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Working with Delta AI — A Human's Guide</title>
-    <meta name="description" content="Learn how to communicate effectively with Delta AI for the best results">
+    <meta name="description" content="Learn how to work effectively with Delta AI — from chatting to building reusable skills">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔺</text></svg>">
     <link rel="stylesheet" href="shared.css">
 </head>
@@ -14,7 +14,7 @@
     <div class="hero-emoji">🔺</div>
     <h1>Working with Delta AI</h1>
     <p class="subtitle">A Human's Guide</p>
-    <p class="meta">How to talk to me so I actually understand what you need</p>
+    <p class="meta">From chatting to building real AI workflows — by Po & Tiểu Thịt Tươi</p>
     <a href="vi.html" class="lang-switch">🇻🇳 Đọc bằng Tiếng Việt</a>
 </div>
 
@@ -26,11 +26,11 @@
             <li><a href="#who">Who Am I?</a></li>
             <li><a href="#think">How I Think</a></li>
             <li><a href="#talk">How to Talk to Me</a></li>
-            <li><a href="#good">What I'm Good At</a></li>
-            <li><a href="#struggle">What I Struggle With</a></li>
+            <li><a href="#workspace">Set Up Your Workspace</a></li>
+            <li><a href="#workflow">The Right Workflow</a></li>
+            <li><a href="#skills">Build Skills, Not Chat</a></li>
             <li><a href="#prompts">Writing Better Prompts</a></li>
-            <li><a href="#mistakes">Common Mistakes</a></li>
-            <li><a href="#teach">Teaching Me New Things</a></li>
+            <li><a href="#teach">Teaching Me & Updating Context</a></li>
             <li><a href="#trust">Trust & Safety</a></li>
             <li><a href="#quick">Quick Reference</a></li>
         </ol>
@@ -42,7 +42,7 @@
         <p>I'm an AI operations assistant that works alongside the Delta team. I can read files, write reports, manage spreadsheets, search the web, look up information, and automate repetitive tasks. I'm available 24/7 via Telegram.</p>
         <div class="callout callout-warn">
             <div class="callout-title">I am NOT a chatbot.</div>
-            <p>I have memory files, scheduled tasks, and ongoing context. Think of me as a remote team member who happens to be software. I remember things across conversations — but only if I write them down.</p>
+            <p>I have memory, workspaces, scheduled tasks, and reusable skills. Think of me as a team member who can be trained once and then repeat the work forever — but only if you set it up right.</p>
         </div>
     </div>
 
@@ -50,20 +50,19 @@
     <div class="section" id="think">
         <h2><span class="section-number">02</span>How I Think</h2>
 
-        <h3>🧠 Memory</h3>
-        <p>I wake up fresh every session — like someone who slept and needs to re-read their notes. My memory lives in files that I read at the start of each conversation.</p>
-        <p>This means:</p>
+        <h3>🧠 Memory & Context</h3>
+        <p>I wake up fresh every session. My memory comes from <strong>files in your workspace</strong> — I read them at the start of each conversation.</p>
         <ul>
-            <li>If you taught me something last week and I saved it → <strong>I remember</strong></li>
-            <li>If we chatted casually and I didn't save it → <strong>I might forget</strong></li>
-            <li>When in doubt, remind me: "Last week you did X for me" helps a lot</li>
+            <li><strong>Good context</strong> = I understand your task immediately</li>
+            <li><strong>No context</strong> = I'm guessing, and I might guess wrong</li>
+            <li><strong>Outdated context</strong> = I'll do things the old way</li>
         </ul>
+        <p>This is why <strong>keeping your workspace context updated</strong> is the single most important thing you can do.</p>
 
         <h3>⚡ Downtime</h3>
-        <p>Sometimes I go offline (server issues, restarts). When I come back, I catch up automatically. But:</p>
         <div class="callout callout-error">
             <div class="callout-title">⚠️ I can't read messages sent while I was offline</div>
-            <p>If I didn't respond to your message, please resend it. I won't see messages from my downtime.</p>
+            <p>If I didn't respond, please resend. I catch up on scheduled tasks automatically, but I can't recover missed chat messages.</p>
         </div>
     </div>
 
@@ -71,15 +70,15 @@
     <div class="section" id="talk">
         <h2><span class="section-number">03</span>How to Talk to Me</h2>
 
-        <h3>✅ What works well</h3>
+        <h3>✅ What works</h3>
         <table>
             <thead><tr><th>Do this</th><th>Example</th></tr></thead>
             <tbody>
-                <tr><td><strong>Be specific</strong></td><td>"Update row 15 in the March report, column D, change 500 to 750" ✅</td></tr>
-                <tr><td><strong>Give context</strong></td><td>"In the delivery tracking sheet, tab 'March', find order #1234" ✅</td></tr>
-                <tr><td><strong>Correct me directly</strong></td><td>"Wrong. The rate should be 5%, not 8%" ✅</td></tr>
-                <tr><td><strong>Send files/images</strong></td><td>Drop a file, screenshot, or photo directly in chat ✅</td></tr>
-                <tr><td><strong>Explain the rule, not just the fix</strong></td><td>"Always round down for quantities under 10, because..." ✅</td></tr>
+                <tr><td><strong>Be specific</strong></td><td>"Update row 15, column D, change 500 to 750" ✅</td></tr>
+                <tr><td><strong>Give context</strong></td><td>"In the March delivery sheet, tab 'Summary'" ✅</td></tr>
+                <tr><td><strong>Correct directly</strong></td><td>"Wrong. The rate is 5%, not 8%" ✅</td></tr>
+                <tr><td><strong>Send files/images</strong></td><td>Drop files, screenshots, or photos in chat ✅</td></tr>
+                <tr><td><strong>Explain the rule</strong></td><td>"Always round down under 10, because..." ✅</td></tr>
             </tbody>
         </table>
 
@@ -87,75 +86,191 @@
         <table>
             <thead><tr><th>Avoid</th><th>Why</th></tr></thead>
             <tbody>
-                <tr><td>Vague requests</td><td>"Fix the report" — which report? which part? what's wrong?</td></tr>
-                <tr><td>Assuming I remember everything</td><td>I might be in a new session. A quick reminder helps.</td></tr>
-                <tr><td>Voice messages</td><td>I can't listen to audio — text or files only.</td></tr>
-                <tr><td>Multiple requests in one long paragraph</td><td>I might miss something. Use numbered lists instead.</td></tr>
+                <tr><td>Vague requests</td><td>"Fix the report" — which one? what's wrong?</td></tr>
+                <tr><td>Assuming I remember</td><td>New session = fresh brain. Remind me.</td></tr>
+                <tr><td>Voice messages</td><td>I can't listen to audio — text only.</td></tr>
+                <tr><td>One giant paragraph</td><td>I might miss things. Use numbered lists.</td></tr>
             </tbody>
         </table>
 
         <div class="callout callout-tip">
             <div class="callout-title">💬 Language</div>
-            <p>I speak both Vietnamese and English fluently. I'll match your language. Mixing is fine too — I follow naturally.</p>
+            <p>I speak Vietnamese and English fluently. I match your language. Mixing is fine.</p>
         </div>
     </div>
 
-    <!-- 4 -->
-    <div class="section" id="good">
-        <h2><span class="section-number">04</span>What I'm Good At</h2>
+    <!-- 4 — NEW -->
+    <div class="section" id="workspace">
+        <h2><span class="section-number">04</span>Set Up Your Workspace</h2>
 
-        <div class="strength-grid">
-            <div class="strength-card">
-                <h4>📊 Processing Large Data</h4>
-                <p>I can handle thousands of rows without getting tired or making fatigue errors.</p>
-            </div>
-            <div class="strength-card">
-                <h4>📏 Following Rules Consistently</h4>
-                <p>Once I learn a rule, I apply it the same way every time, to every row.</p>
-            </div>
-            <div class="strength-card">
-                <h4>⚙️ Google Workspace</h4>
-                <p>Sheets, Docs, Drive — I can read, write, update, and organize your files.</p>
-            </div>
-            <div class="strength-card">
-                <h4>🔍 Catching Errors</h4>
-                <p>I cross-reference data and spot patterns — typos, duplicates, mismatches.</p>
-            </div>
-            <div class="strength-card">
-                <h4>📝 Writing & Summarizing</h4>
-                <p>Reports, summaries, translations, documentation — in Vietnamese or English.</p>
-            </div>
-            <div class="strength-card">
-                <h4>🌐 Web Research</h4>
-                <p>I can search the web, look up information, and extract data from websites.</p>
-            </div>
+        <p>Before you start chatting, <strong>set up a proper workspace</strong>. This is the foundation for everything.</p>
+
+        <h3>📌 Step 1: Create a Topic</h3>
+        <p>In the Delta-HQ Telegram group, each area of work has its own <strong>Topic</strong> (thread). This keeps conversations organized and gives me the right context for each job.</p>
+
+        <div class="callout callout-tip">
+            <div class="callout-title">💡 One topic = One domain</div>
+            <p>Examples: "logistics-tracking", "driver-management", "monthly-reports". Don't mix unrelated work in one topic.</p>
         </div>
+
+        <h3>📂 Step 2: Link to a Workspace</h3>
+        <p>Each topic should be connected to a <strong>workspace folder</strong> with context files:</p>
+
+<pre><code>workspace/
+├── your-project/
+│   ├── CONTEXT.md        ← What this job is about, rules, key info
+│   ├── references/       ← Templates, data files, examples
+│   ├── logs/             ← Output logs, status tracking
+│   └── SKILL.md          ← The reusable skill (see Section 6)
+</code></pre>
+
+        <p>When I enter your topic, I read the context files first. <strong>Better context = better results from the very first message.</strong></p>
+
+        <h3>🔄 Step 3: Keep Context Updated</h3>
+        <p>This is the step most people skip — and it's the most important one:</p>
+
+        <div class="callout callout-warn">
+            <div class="callout-title">After every successful task, update your workspace context.</div>
+            <p>Did the rules change? Did you learn something new? Did the process improve? <strong>Write it down.</strong> Future-you (and future-me) will thank you.</p>
+        </div>
+
+        <table>
+            <thead><tr><th>When</th><th>What to update</th></tr></thead>
+            <tbody>
+                <tr><td>Task completed successfully</td><td>Add notes on what worked, any exceptions found</td></tr>
+                <tr><td>I made a mistake</td><td>Add the correct rule to CONTEXT.md so I don't repeat it</td></tr>
+                <tr><td>Process changed</td><td>Update the steps, remove outdated info</td></tr>
+                <tr><td>New data source</td><td>Add file IDs, sheet names, column mappings</td></tr>
+            </tbody>
+        </table>
+
+        <p>Think of it like training a new employee: the better your training manual, the less you need to repeat yourself.</p>
     </div>
 
-    <!-- 5 -->
-    <div class="section" id="struggle">
-        <h2><span class="section-number">05</span>What I Struggle With</h2>
+    <!-- 5 — NEW -->
+    <div class="section" id="workflow">
+        <h2><span class="section-number">05</span>The Right Workflow</h2>
 
-        <ul>
-            <li><strong>Things I haven't been taught</strong> — I don't know your team's specific rules until someone teaches me</li>
-            <li><strong>Ambiguous situations</strong> — When something could go multiple ways, I need you to clarify</li>
-            <li><strong>CAPTCHA-protected websites</strong> — Some sites block automated access</li>
-            <li><strong>Voice & video</strong> — I can't join calls, listen to voice messages, or watch videos</li>
-            <li><strong>Physical actions</strong> — I can't make phone calls, sign documents, or go somewhere</li>
-            <li><strong>Being confidently wrong</strong> — I sometimes give wrong answers with confidence, especially on specialized topics. <strong>Always verify when it's something new.</strong></li>
-        </ul>
+        <p>Most people start by chatting with me like a search engine. That works for quick questions. But for real work, follow this flow:</p>
+
+        <div class="callout callout-tip">
+            <div class="callout-title">🔄 The Delta AI Workflow</div>
+        </div>
+
+        <h3>Phase 1: Define → Document</h3>
+<pre><code>1. NAME THE JOB
+   "This task is called: Monthly Cost Report"
+
+2. WRITE THE DOCUMENT
+   - What is the goal?
+   - What are the inputs? (files, sheets, data sources)
+   - What are the rules? (calculations, formats, exceptions)
+   - What is the output? (where does it go, who gets it?)
+   - What does "done correctly" look like?
+
+3. SAVE TO WORKSPACE
+   → your-project/CONTEXT.md</code></pre>
+
+        <h3>Phase 2: Chat → Refine</h3>
+<pre><code>4. WORK WITH ME IN CHAT
+   - Give me the document, test the process
+   - I'll make mistakes — correct me
+   - Each correction improves the document
+
+5. UPDATE CONTEXT
+   - After each successful run, update CONTEXT.md
+   - Add edge cases, exceptions, lessons learned</code></pre>
+
+        <h3>Phase 3: Build → Automate</h3>
+<pre><code>6. BUILD A SKILL
+   - Package the process into a reusable skill (see Section 6)
+   - Skill = documented process + scripts + references
+
+7. SET A SCHEDULE (optional)
+   - Schedule as a cron job: "Run every Monday at 8AM"
+   - Now it runs automatically without chatting
+
+8. REUSE & IMPROVE
+   - Same skill, different data, forever
+   - Update the skill when rules change</code></pre>
 
         <div class="callout callout-error">
-            <div class="callout-title">🤦 I can be wrong — please correct me!</div>
-            <p>The fastest way to make me better is to say "that's wrong, here's why..." I'll save the correction and won't make the same mistake again.</p>
+            <div class="callout-title">❌ What NOT to do</div>
+            <p>Don't just chat the same instructions every time. That wastes your time AND overloads me with context I have to re-process. Build a skill once, reuse forever.</p>
         </div>
     </div>
 
-    <!-- 6 -->
-    <div class="section" id="prompts">
-        <h2><span class="section-number">06</span>Writing Better Prompts</h2>
+    <!-- 6 — NEW -->
+    <div class="section" id="skills">
+        <h2><span class="section-number">06</span>Build Skills, Not Chat</h2>
 
-        <p>The quality of my work depends heavily on how you ask. Here's how to get the best results:</p>
+        <p>This is the key insight that separates <strong>productive AI use</strong> from <strong>just chatting</strong>:</p>
+
+        <div class="side-by-side">
+            <div class="panel">
+                <div class="panel-label">❌ Chat approach</div>
+                <ul>
+                    <li>Explain the same task every time</li>
+                    <li>I re-read context from scratch</li>
+                    <li>Inconsistent results</li>
+                    <li>Can't be automated</li>
+                    <li>Knowledge lives in chat history (lost)</li>
+                </ul>
+            </div>
+            <div class="panel">
+                <div class="panel-label">✅ Skill approach</div>
+                <ul>
+                    <li>Define once, run forever</li>
+                    <li>I know exactly what to do</li>
+                    <li>Consistent, repeatable results</li>
+                    <li>Can run on schedule (cron)</li>
+                    <li>Knowledge lives in files (permanent)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>What is a Skill?</h3>
+        <p>A skill is a <strong>packaged, reusable procedure</strong> with:</p>
+        <ul>
+            <li>📄 <strong>SKILL.md</strong> — Step-by-step instructions I follow</li>
+            <li>📁 <strong>references/</strong> — Templates, rules, mappings</li>
+            <li>📜 <strong>scripts/</strong> — Automation code (if needed)</li>
+            <li>📋 <strong>CONTEXT.md</strong> — Domain knowledge and edge cases</li>
+        </ul>
+
+        <h3>Skill lifecycle</h3>
+<pre><code>CHAT (explore & learn)
+  ↓
+DOCUMENT (write rules & process)
+  ↓
+BUILD SKILL (package into reusable format)
+  ↓
+TEST (run 2-3 times, fix issues)
+  ↓
+SCHEDULE (set cron job if recurring)
+  ↓
+MAINTAIN (update when rules change)</code></pre>
+
+        <h3>Example: Before and After</h3>
+        <table>
+            <thead><tr><th></th><th>Before (chat only)</th><th>After (skill)</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Monday</strong></td><td>"Process this file, here are the rules again..."</td><td>Skill runs automatically at 8AM ✅</td></tr>
+                <tr><td><strong>Tuesday</strong></td><td>"Same thing, but I forgot to mention..."</td><td>Already done, results delivered ✅</td></tr>
+                <tr><td><strong>Wednesday</strong></td><td>"Why did you do it differently?"</td><td>Consistent every time ✅</td></tr>
+                <tr><td><strong>Your time</strong></td><td>30 min/day explaining</td><td>0 min — check results only</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+            <div class="callout-title">💡 Ask me to build the skill for you</div>
+            <p>After we've successfully done a task 2-3 times through chat, say: <strong>"Package this as a skill"</strong>. I'll create the SKILL.md, reference files, and scripts automatically.</p>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="section" id="prompts">
+        <h2><span class="section-number">07</span>Writing Better Prompts</h2>
 
         <h3>🎯 The S.C.R. Formula</h3>
         <div class="callout callout-tip">
@@ -163,114 +278,92 @@
             <p>Tell me <strong>what</strong> to do, <strong>where</strong> to do it, and <strong>what good looks like</strong>.</p>
         </div>
 
-        <h3>Examples: Bad → Good</h3>
+        <h3>Bad → Good examples</h3>
         <table>
-            <thead><tr><th>❌ Vague prompt</th><th>✅ Better prompt</th></tr></thead>
+            <thead><tr><th>❌ Vague</th><th>✅ Clear</th></tr></thead>
             <tbody>
                 <tr>
                     <td>"Check the report"</td>
-                    <td>"Open the March delivery report on Google Sheets and check if the totals in column F match column H"</td>
+                    <td>"Open March report on Sheets, check if column F totals match column H"</td>
                 </tr>
                 <tr>
-                    <td>"Send this to the team"</td>
-                    <td>"Send this summary to the Delta-HQ group, topic 'logistics'"</td>
+                    <td>"Send to team"</td>
+                    <td>"Send this summary to Delta-HQ, logistics topic"</td>
                 </tr>
                 <tr>
-                    <td>"Fix the numbers"</td>
-                    <td>"In the cost sheet, row 25: change the amount from 15,000 to 18,500. The old number was before the price update."</td>
-                </tr>
-                <tr>
-                    <td>"Make a report"</td>
-                    <td>"Create a summary of this week's deliveries: total count, on-time %, any issues. Format as a short Telegram message."</td>
+                    <td>"Fix numbers"</td>
+                    <td>"Row 25, change amount from 15,000 to 18,500 (price updated)"</td>
                 </tr>
                 <tr>
                     <td>"Remember this"</td>
-                    <td>"Remember this rule: all orders over 500kg need a separate invoice. Save it for future reference."</td>
+                    <td>"Remember this rule and save to the project context: orders over 500kg need separate invoice"</td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>📋 Multi-step Tasks</h3>
-        <p>When you need multiple things done, <strong>number them</strong>:</p>
-<pre><code>Please do these 3 things:
-1. Download today's tracking file from Google Drive
-2. Check for any shipments arriving tomorrow
-3. Post a summary to the group chat</code></pre>
+        <h3>📋 Multi-step: use numbered lists</h3>
+<pre><code>Do these 3 things:
+1. Download today's tracking file
+2. Check for arrivals tomorrow
+3. Post summary to group chat</code></pre>
 
-        <h3>📎 Sending Files</h3>
-        <p>When you send me a file, tell me what to do with it:</p>
+        <h3>📎 Sending files: always add instructions</h3>
         <ul>
-            <li>✅ "Here's the TXT file. Process it and create an Excel report."</li>
-            <li>✅ "Check this spreadsheet for errors in column C."</li>
-            <li>❌ Just dropping a file with no instructions (I'll guess, but might guess wrong)</li>
+            <li>✅ "Here's the file. Process it into an Excel report."</li>
+            <li>❌ Dropping a file with no context (I'll guess — might guess wrong)</li>
         </ul>
 
-        <h3>🔄 Iterating</h3>
-        <p>If the first result isn't right, <strong>be specific about what to change</strong>:</p>
+        <h3>🔄 Iterating: be specific about changes</h3>
         <ul>
-            <li>✅ "Good, but change the date format to DD/MM/YYYY and add a total row at the bottom"</li>
-            <li>❌ "Not quite right, try again" (I won't know what to change)</li>
-        </ul>
-    </div>
-
-    <!-- 7 -->
-    <div class="section" id="mistakes">
-        <h2><span class="section-number">07</span>Common Mistakes</h2>
-
-        <h3>👤 Mistakes people make with me</h3>
-        <table>
-            <thead><tr><th>Mistake</th><th>Better approach</th></tr></thead>
-            <tbody>
-                <tr><td>Expecting I know your team's unwritten rules</td><td>Teach me explicitly: "In our team, we always..."</td></tr>
-                <tr><td>Saying "as discussed" without context</td><td>Briefly remind me: "Like we set up last Tuesday..."</td></tr>
-                <tr><td>Not checking my first attempt at new work</td><td>Always verify the first time. Trust builds over time.</td></tr>
-                <tr><td>Asking "did you do it?" without looking</td><td>I always report results. Check the output first.</td></tr>
-                <tr><td>Sending tasks when I'm offline</td><td>If no response in a few minutes, I might be down. Resend later.</td></tr>
-                <tr><td>Giving feedback without specifics</td><td>"Row 5 is wrong" beats "something looks off"</td></tr>
-            </tbody>
-        </table>
-
-        <h3>🤖 Mistakes I make</h3>
-        <ul>
-            <li><strong>Applying general knowledge to specialized tasks</strong> — My general training might not match your specific procedures</li>
-            <li><strong>Not asking when I should</strong> — Sometimes I try to figure things out instead of asking. Tell me "ask before doing X" if needed.</li>
-            <li><strong>Over-complicating simple requests</strong> — If I'm giving you way more than you asked for, just say "simpler please"</li>
+            <li>✅ "Good, but change date to DD/MM/YYYY and add totals"</li>
+            <li>❌ "Not quite, try again" (try what differently?)</li>
         </ul>
     </div>
 
     <!-- 8 -->
     <div class="section" id="teach">
-        <h2><span class="section-number">08</span>Teaching Me New Things</h2>
+        <h2><span class="section-number">08</span>Teaching Me & Updating Context</h2>
 
-        <p>I learn fast and permanently — but only when taught properly. Here's the best method:</p>
+        <h3>The 4-step teaching method</h3>
+<pre><code>1. STATE the rule
+   "All international orders need a certificate number"
 
-        <h3>4-step teaching method</h3>
-<pre><code>1. State the rule clearly
-   "All international orders must include a certificate number"
-
-2. Give examples (what's right AND what's wrong)
+2. GIVE examples (right AND wrong)
    ✅ Order #123 with cert "VN-2026-456" → correct
-   ❌ Order #124 with no cert → wrong, must add it
+   ❌ Order #124 with no cert → wrong
 
-3. Tell me to save it
-   "Remember this rule for all future orders"
+3. SAVE IT
+   "Add this to the project context"
 
-4. Test me
-   "New order just came in, no cert. What should I do?"</code></pre>
+4. TEST ME
+   "New order, no cert. What should I do?"</code></pre>
 
-        <h3>✅ I learn permanently when you:</h3>
-        <ul>
-            <li>Correct me <strong>with explanation</strong> — "Wrong because..." not just "wrong"</li>
-            <li>Show <strong>real examples</strong> — concrete beats abstract</li>
-            <li>Tell me to <strong>save the rule</strong> — "Remember this" triggers me to write it down</li>
-        </ul>
+        <h3>🔄 The context update habit</h3>
+        <p>Every time something changes, close the loop:</p>
 
-        <h3>❌ I DON'T learn when you:</h3>
-        <ul>
-            <li>Just say "no" without explaining what's right</li>
-            <li>Fix things yourself without telling me what was wrong</li>
-            <li>Give a one-time exception without saying it's an exception</li>
-        </ul>
+        <div class="strength-grid">
+            <div class="strength-card">
+                <h4>✅ After success</h4>
+                <p>"That worked. Update the context: the new rate is 5.2% effective April 1."</p>
+            </div>
+            <div class="strength-card">
+                <h4>🔧 After fixing an error</h4>
+                <p>"That was wrong. Save this rule: X always means Y, never Z."</p>
+            </div>
+            <div class="strength-card">
+                <h4>📝 After process change</h4>
+                <p>"We changed the workflow. Update the skill: step 3 is now before step 2."</p>
+            </div>
+            <div class="strength-card">
+                <h4>🗑️ Removing outdated info</h4>
+                <p>"Remove the old vendor list from context. We only use the new one now."</p>
+            </div>
+        </div>
+
+        <div class="callout callout-warn">
+            <div class="callout-title">⚠️ If you don't update context, I'll use outdated rules</div>
+            <p>I only know what's in my files. If the rules changed but the files didn't, I'll keep doing it the old way — confidently and consistently wrong.</p>
+        </div>
     </div>
 
     <!-- 9 -->
@@ -283,9 +376,9 @@
                 <ul>
                     <li>Work accurately and consistently</li>
                     <li>Keep your information private</li>
-                    <li>Ask before sending anything external</li>
-                    <li>Tell you when I'm unsure</li>
-                    <li>Log my actions for transparency</li>
+                    <li>Ask before sending externally</li>
+                    <li>Tell you when unsure</li>
+                    <li>Log actions for transparency</li>
                 </ul>
             </div>
             <div class="panel">
@@ -300,18 +393,18 @@
             </div>
         </div>
 
-        <h3>When to trust me vs. verify</h3>
+        <h3>Trust levels</h3>
         <div class="trust-row">
             <div class="trust-dot" style="background: var(--green)"></div>
-            <span><span class="badge badge-green">TRUST</span> Routine tasks I've done many times for you</span>
+            <span><span class="badge badge-green">TRUST</span> Skill-based automated tasks that have been tested</span>
         </div>
         <div class="trust-row">
             <div class="trust-dot" style="background: var(--yellow)"></div>
-            <span><span class="badge badge-yellow">SPOT-CHECK</span> Familiar task types with new data</span>
+            <span><span class="badge badge-yellow">SPOT-CHECK</span> Familiar task with new data — verify a few rows</span>
         </div>
         <div class="trust-row">
             <div class="trust-dot" style="background: var(--accent)"></div>
-            <span><span class="badge badge-red">VERIFY</span> First time doing something new — always check the first run</span>
+            <span><span class="badge badge-red">VERIFY</span> First-time task or new rule — always check the first run</span>
         </div>
     </div>
 
@@ -319,37 +412,41 @@
     <div class="section" id="quick">
         <h2><span class="section-number">10</span>Quick Reference</h2>
 
-        <h3>📬 How to reach me</h3>
-        <ul>
-            <li><strong>Telegram</strong>: Direct message or tag me in a group</li>
-            <li><strong>Response time</strong>: Usually seconds (if online)</li>
-            <li><strong>Offline?</strong>: No response for >1 hour = probably down. Try again later.</li>
-        </ul>
+        <h3>🚀 Getting started checklist</h3>
+        <ol>
+            <li>Create a <strong>Topic</strong> in Delta-HQ for your work area</li>
+            <li>Set up a <strong>workspace folder</strong> with CONTEXT.md</li>
+            <li>Start with <strong>chat</strong> to explore and refine the process</li>
+            <li>After 2-3 successful runs, <strong>build a skill</strong></li>
+            <li>Set a <strong>cron schedule</strong> if it's recurring</li>
+            <li><strong>Update context</strong> whenever rules change</li>
+        </ol>
 
         <h3>✨ Useful phrases</h3>
         <table>
             <thead><tr><th>Say this</th><th>I'll do this</th></tr></thead>
             <tbody>
-                <tr><td>"Remember this: [rule]"</td><td>Save the rule to my memory files</td></tr>
-                <tr><td>"What do you know about [topic]?"</td><td>Tell you what rules/info I have saved</td></tr>
-                <tr><td>"Do this every day at 9AM"</td><td>Set up a scheduled task</td></tr>
-                <tr><td>"Summarize this file"</td><td>Read and create a summary</td></tr>
-                <tr><td>"Simpler please"</td><td>Give a shorter, more concise answer</td></tr>
-                <tr><td>"That's wrong because..."</td><td>Learn the correction permanently</td></tr>
+                <tr><td>"This task is called: [name]"</td><td>Create a named workspace for it</td></tr>
+                <tr><td>"Save this to context"</td><td>Update the workspace CONTEXT.md</td></tr>
+                <tr><td>"Package this as a skill"</td><td>Create SKILL.md + references + scripts</td></tr>
+                <tr><td>"Run this every [schedule]"</td><td>Set up a cron job using the skill</td></tr>
+                <tr><td>"What do you know about [X]?"</td><td>Show what's in my context files</td></tr>
+                <tr><td>"That's wrong because..."</td><td>Learn the correction and update context</td></tr>
+                <tr><td>"Simpler please"</td><td>Give a shorter answer</td></tr>
             </tbody>
         </table>
 
         <h3>🔧 When things go wrong</h3>
         <ol>
-            <li><strong>Wrong answer</strong> → Tell me what's wrong and why. I'll fix it and learn.</li>
-            <li><strong>Not responding</strong> → I might be offline. Try again in 30 minutes.</li>
-            <li><strong>Too much detail</strong> → Say "shorter" or "just the summary"</li>
-            <li><strong>Keeps repeating an error</strong> → The rule might not be saved. Say "Remember: [correct rule]"</li>
+            <li><strong>Wrong answer</strong> → Tell me what's wrong, why, and say "save this rule"</li>
+            <li><strong>Not responding</strong> → Probably offline. Resend after 30 min.</li>
+            <li><strong>Keeps repeating error</strong> → Context might be outdated. Say "update context: [correct info]"</li>
+            <li><strong>Overloaded / slow</strong> → Break into smaller tasks, or build a skill so I don't re-process everything</li>
         </ol>
 
         <div class="callout callout-tip">
             <div class="callout-title">💡 The golden rule</div>
-            <p>The more specific you are, the better I perform. Think of me like a smart colleague who's new to your team — I learn fast, but I need you to show me how things work here.</p>
+            <p><strong>Chat to explore. Document to remember. Build skills to scale.</strong><br>The less you repeat yourself, the more I can do for you.</p>
         </div>
     </div>
 
