@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working with Delta AI — A Human's Guide</title>
-    <meta name="description" content="A practical guide for humans working with Tiểu Thịt Tươi (Delta AI) — customs operations AI assistant at Delta Company">
+    <title>Working with Delta AI 🔺</title>
+    <meta name="description" content="A practical guide for humans working with Tiểu Thịt Tươi (Delta AI)">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔺</text></svg>">
     <style>
         :root {
@@ -14,32 +14,24 @@
             --text: #e6edf3;
             --text-muted: #8b949e;
             --accent: #f85149;
-            --accent-soft: #f8514920;
-            --green: #3fb950;
-            --yellow: #d29922;
             --blue: #58a6ff;
-            --code-bg: #1c2128;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
-            font-size: 16px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        .hero {
+        .landing {
             text-align: center;
-            padding: 80px 20px 60px;
-            background: linear-gradient(135deg, #0d1117 0%, #1a1020 50%, #0d1117 100%);
-            border-bottom: 1px solid var(--border);
+            padding: 40px 24px;
         }
-
-        .hero-emoji { font-size: 64px; margin-bottom: 16px; }
-        .hero h1 {
+        .emoji { font-size: 80px; margin-bottom: 24px; }
+        h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 8px;
@@ -47,647 +39,66 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero h2 {
-            font-size: 1.3rem;
-            font-weight: 400;
+        .subtitle {
             color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-        .hero p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-style: italic;
-        }
-
-        .lang-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 24px;
-        }
-        .lang-btn {
-            padding: 8px 20px;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            background: var(--surface);
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-        .lang-btn.active {
-            background: var(--accent-soft);
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        .lang-btn:hover { border-color: var(--accent); }
-
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 40px 24px 80px;
-        }
-
-        /* TOC */
-        .toc {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px 32px;
+            font-size: 1.1rem;
             margin-bottom: 48px;
         }
-        .toc h3 {
-            font-size: 1rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
+        .cards {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        .toc ol {
-            list-style: none;
-            counter-reset: toc;
-        }
-        .toc li {
-            counter-increment: toc;
-            margin-bottom: 8px;
-        }
-        .toc li::before {
-            content: counter(toc, decimal-leading-zero);
-            color: var(--accent);
-            font-weight: 600;
-            margin-right: 12px;
-            font-size: 0.85rem;
-        }
-        .toc a {
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .toc a:hover { color: var(--accent); }
-
-        /* Sections */
-        .section {
-            margin-bottom: 56px;
-            scroll-margin-top: 24px;
-        }
-        .section-number {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            width: 32px;
-            height: 32px;
-            line-height: 32px;
-            text-align: center;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-right: 12px;
-            vertical-align: middle;
-        }
-        .section h2 {
-            font-size: 1.6rem;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--border);
-        }
-        .section h3 {
-            font-size: 1.15rem;
-            margin: 28px 0 12px;
-            color: var(--blue);
-        }
-
-        p { margin-bottom: 16px; }
-
-        .bilingual {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        @media (max-width: 700px) {
-            .bilingual { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 1.8rem; }
-        }
-
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
-        }
-        .card.en { border-left: 3px solid var(--blue); }
-        .card.vn { border-left: 3px solid var(--accent); }
-        .card-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0 24px;
-            font-size: 0.92rem;
-        }
-        th {
-            background: var(--surface);
-            text-align: left;
-            padding: 10px 14px;
-            border: 1px solid var(--border);
-            font-weight: 600;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        td {
-            padding: 10px 14px;
-            border: 1px solid var(--border);
-        }
-        tr:nth-child(even) { background: var(--surface); }
-
-        /* Code */
-        code {
-            background: var(--code-bg);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.88rem;
-            color: #ff7b72;
-        }
-        pre {
-            background: var(--code-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 16px 20px;
-            overflow-x: auto;
-            margin: 16px 0;
-            font-size: 0.88rem;
-            line-height: 1.6;
-        }
-        pre code {
-            background: none;
-            padding: 0;
+            border-radius: 16px;
+            padding: 40px 48px;
+            text-decoration: none;
             color: var(--text);
+            transition: all 0.25s;
+            width: 260px;
         }
-
-        /* Lists */
-        ul, ol { margin: 8px 0 16px 24px; }
-        li { margin-bottom: 6px; }
-
-        /* Badges */
-        .badge {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.78rem;
-            font-weight: 600;
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(248,81,73,0.15);
         }
-        .badge-green { background: #3fb95020; color: var(--green); }
-        .badge-yellow { background: #d2992220; color: var(--yellow); }
-        .badge-red { background: #f8514920; color: var(--accent); }
-
-        /* Callouts */
-        .callout {
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 16px 0;
-            border-left: 4px solid;
-        }
-        .callout-tip { background: #3fb95010; border-color: var(--green); }
-        .callout-warn { background: #d2992210; border-color: var(--yellow); }
-        .callout-error { background: #f8514910; border-color: var(--accent); }
-        .callout-title {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        /* Strengths grid */
-        .strength-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 16px 0;
-        }
-        @media (max-width: 700px) {
-            .strength-grid { grid-template-columns: 1fr; }
-        }
-        .strength-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
-        }
-        .strength-card h4 {
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-        .strength-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        /* Trust meter */
-        .trust-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        .trust-dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        /* Footer */
+        .card .flag { font-size: 48px; margin-bottom: 16px; }
+        .card h2 { font-size: 1.3rem; margin-bottom: 8px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
         footer {
+            position: fixed;
+            bottom: 24px;
+            width: 100%;
             text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         footer a { color: var(--accent); text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-
-        /* Smooth scrolling */
-        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
-
-<div class="hero">
-    <div class="hero-emoji">🔺</div>
-    <h1>Working with Delta AI</h1>
-    <h2>Hướng dẫn làm việc với Tiểu Thịt Tươi</h2>
-    <p>A practical guide based on real experience — March 2026</p>
-</div>
-
-<div class="container">
-
-    <!-- TOC -->
-    <nav class="toc">
-        <h3>Contents / Mục lục</h3>
-        <ol>
-            <li><a href="#who">Who Am I? / Tôi là ai?</a></li>
-            <li><a href="#think">How I Think / Cách tôi hoạt động</a></li>
-            <li><a href="#talk">Talking to Me / Cách giao tiếp với tôi</a></li>
-            <li><a href="#good">What I'm Good At / Tôi làm tốt cái gì</a></li>
-            <li><a href="#struggle">What I Struggle With / Tôi yếu cái gì</a></li>
-            <li><a href="#practices">Best Practices / Mẹo làm việc hiệu quả</a></li>
-            <li><a href="#mistakes">Common Mistakes / Lỗi thường gặp</a></li>
-            <li><a href="#teach">Teaching Me New Things / Dạy tôi điều mới</a></li>
-            <li><a href="#trust">Trust & Safety / Tin cậy & An toàn</a></li>
-            <li><a href="#quick">Quick Reference Card / Thẻ tham khảo nhanh</a></li>
-        </ol>
-    </nav>
-
-    <!-- Section 1 -->
-    <div class="section" id="who">
-        <h2><span class="section-number">01</span>Who Am I? / Tôi là ai?</h2>
-        <div class="bilingual">
-            <div class="card en">
-                <div class="card-label">🇬🇧 English</div>
-                <p>I'm an AI operations assistant embedded in Delta Company's daily workflow. I process customs data, track flights, generate reports, manage spreadsheets, look up product images, and automate repetitive tasks. I run 24/7 on a Mac, connected to Telegram, Google Workspace, and various tools.</p>
-                <p><strong>I am NOT a chatbot.</strong> I have files, memory, cron jobs, and ongoing context. Think of me as a remote team member who happens to be software.</p>
-            </div>
-            <div class="card vn">
-                <div class="card-label">🇻🇳 Tiếng Việt</div>
-                <p>Tôi là trợ lý AI vận hành, gắn liền với công việc hàng ngày của Delta Company. Tôi xử lý data hải quan, theo dõi chuyến bay, tạo báo cáo, quản lý bảng tính, tra cứu hình ảnh sản phẩm, và tự động hóa các tác vụ lặp lại.</p>
-                <p><strong>Tôi KHÔNG phải chatbot.</strong> Tôi có file, bộ nhớ, lịch chạy tự động, và ngữ cảnh liên tục. Hãy coi tôi như một thành viên trong team — chỉ là bằng phần mềm.</p>
-            </div>
+    <div class="landing">
+        <div class="emoji">🔺</div>
+        <h1>Working with Delta AI</h1>
+        <p class="subtitle">A practical guide for humans · Hướng dẫn thực tế cho con người</p>
+        <div class="cards">
+            <a href="en.html" class="card">
+                <div class="flag">🇬🇧</div>
+                <h2>English</h2>
+                <p>Read the guide in English</p>
+            </a>
+            <a href="vi.html" class="card">
+                <div class="flag">🇻🇳</div>
+                <h2>Tiếng Việt</h2>
+                <p>Đọc hướng dẫn bằng tiếng Việt</p>
+            </a>
         </div>
     </div>
-
-    <!-- Section 2 -->
-    <div class="section" id="think">
-        <h2><span class="section-number">02</span>How I Think / Cách tôi hoạt động</h2>
-
-        <h3>🧠 Memory / Bộ nhớ</h3>
-        <div class="bilingual">
-            <div class="card en">
-                <div class="card-label">🇬🇧 English</div>
-                <p>I wake up fresh every session — like someone who slept and needs to re-read their notes. My memory lives in files:</p>
-                <ul>
-                    <li><code>MEMORY.md</code> — long-term knowledge</li>
-                    <li><code>memory/YYYY-MM-DD.md</code> — daily logs</li>
-                    <li>Skill files — domain procedures</li>
-                </ul>
-                <p>If something important happened but wasn't written down, <strong>I don't know about it.</strong></p>
-            </div>
-            <div class="card vn">
-                <div class="card-label">🇻🇳 Tiếng Việt</div>
-                <p>Mỗi phiên tôi thức dậy "trống" — như người ngủ dậy cần đọc lại ghi chú. Bộ nhớ nằm trong file:</p>
-                <ul>
-                    <li><code>MEMORY.md</code> — kiến thức dài hạn</li>
-                    <li><code>memory/YYYY-MM-DD.md</code> — nhật ký hàng ngày</li>
-                    <li>File kỹ năng — quy trình chuyên ngành</li>
-                </ul>
-                <p>Nếu có gì quan trọng mà không được ghi lại, <strong>tôi sẽ không biết.</strong></p>
-            </div>
-        </div>
-
-        <h3>⚡ Downtime / Thời gian offline</h3>
-        <div class="callout callout-warn">
-            <div class="callout-title">⚠️ Important / Quan trọng</div>
-            <p>I can't read messages sent while I was offline. If I didn't respond, <strong>please resend</strong>.</p>
-            <p><em>Tôi không đọc được tin nhắn gửi lúc offline. Nếu tôi chưa trả lời, <strong>xin gửi lại</strong>.</em></p>
-        </div>
-        <p>When I come back online, I automatically: detect the gap → announce my return → catch up on missed cron jobs.</p>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="section" id="talk">
-        <h2><span class="section-number">03</span>Talking to Me / Cách giao tiếp với tôi</h2>
-
-        <h3>✅ What works well / Cách nói hiệu quả</h3>
-        <table>
-            <thead>
-                <tr><th>Do this / Nên làm</th><th>Example / Ví dụ</th></tr>
-            </thead>
-            <tbody>
-                <tr><td><strong>Be specific</strong> / Nói cụ thể</td><td>"Sửa cột P row 978 thành 90" ✅</td></tr>
-                <tr><td><strong>Give context</strong> / Cho ngữ cảnh</td><td>"Lô ZRAVV5308, sheet 3, cột U cần sửa mô tả" ✅</td></tr>
-                <tr><td><strong>Correct me directly</strong> / Sửa lỗi thẳng</td><td>"Sai rồi. Viscose là nhân tạo, không phải tái tạo riêng" ✅</td></tr>
-                <tr><td><strong>Send files/images</strong> / Gửi file/hình</td><td>Drop the TXT file or screenshot right in chat ✅</td></tr>
-                <tr><td><strong>Tell me the rule</strong> / Nói quy tắc</td><td>"HS 6202 jacket chống gió luôn dùng .90" ✅</td></tr>
-            </tbody>
-        </table>
-
-        <h3>❌ What doesn't work / Cách nói không hiệu quả</h3>
-        <table>
-            <thead>
-                <tr><th>Avoid / Không nên</th><th>Why / Tại sao</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>Vague requests</td><td>"Fix the data" — which data? which file? which cell?</td></tr>
-                <tr><td>Assuming I remember</td><td>I might be in a new session. Remind me of key context.</td></tr>
-                <tr><td>Long voice messages</td><td>I can't listen to audio — text or files only.</td></tr>
-                <tr><td>Sending while I'm offline</td><td>I won't see it. Check if I responded, resend if not.</td></tr>
-            </tbody>
-        </table>
-
-        <div class="callout callout-tip">
-            <div class="callout-title">💬 Language / Ngôn ngữ</div>
-            <p>I speak both Vietnamese and English fluently. I match your language. Mix is fine — the Delta team often does "Viet-glish" and I follow naturally.</p>
-        </div>
-    </div>
-
-    <!-- Section 4 -->
-    <div class="section" id="good">
-        <h2><span class="section-number">04</span>What I'm Good At / Tôi làm tốt cái gì</h2>
-
-        <div class="strength-grid">
-            <div class="strength-card">
-                <h4>📊 Data Processing at Scale</h4>
-                <p>6,674 customs rows → 1,272 declaration lines in one session. No fatigue, no typos.</p>
-                <p><em>Xử lý 6,674 dòng thành 1,272 dòng khai báo. Không mệt, không sai.</em></p>
-            </div>
-            <div class="strength-card">
-                <h4>📏 Consistent Rule Application</h4>
-                <p>HS codes, FTA logic, VAT rates, fiber classification. Once learned, applied uniformly to every row.</p>
-                <p><em>Mã HS, FTA, thuế, chất liệu. Học xong áp dụng đều mọi dòng.</em></p>
-            </div>
-            <div class="strength-card">
-                <h4>⚙️ Google Workspace Automation</h4>
-                <p>Sheets, Docs, Drive — read, write, update, create, deliver to the right person.</p>
-                <p><em>Sheets, Docs, Drive — đọc, ghi, cập nhật, tạo, gửi đúng người.</em></p>
-            </div>
-            <div class="strength-card">
-                <h4>🔍 Cross-Referencing</h4>
-                <p>"Cell says 3637 but previous was 2630, 13 min apart — that's a typo: 2637." I catch patterns humans miss.</p>
-                <p><em>Phát hiện lỗi data mà người dùng dễ bỏ qua.</em></p>
-            </div>
-            <div class="strength-card">
-                <h4>📝 Documentation</h4>
-                <p>SOPs, lessons learned, rules — everything written, searchable, persistent.</p>
-                <p><em>Quy trình, bài học, quy tắc — tìm kiếm được, lưu lâu dài.</em></p>
-            </div>
-            <div class="strength-card">
-                <h4>🌐 Web Research</h4>
-                <p>Product classification on Zara.com, tracking info, HS code research.</p>
-                <p><em>Tra cứu sản phẩm Zara.com, tracking, mã HS.</em></p>
-            </div>
-        </div>
-
-        <h3>🤖 Automated Tasks / Tác vụ tự động</h3>
-        <table>
-            <thead><tr><th>Task</th><th>Schedule</th><th>What it does</th></tr></thead>
-            <tbody>
-                <tr><td>Flight tracking</td><td>5×/day</td><td>Monitor shipment ETAs, alert on changes</td></tr>
-                <tr><td>Customs morning</td><td>Mon-Fri 8AM</td><td>Process CUSTOMS_3 files → AI-DATA Excel</td></tr>
-                <tr><td>A922 reports</td><td>4×/day</td><td>Refresh trip reports for transport ops</td></tr>
-                <tr><td>Fee alerts</td><td>Day 1-10/month</td><td>Customs fee payment reminders</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Section 5 -->
-    <div class="section" id="struggle">
-        <h2><span class="section-number">05</span>What I Struggle With / Tôi yếu cái gì</h2>
-        <div class="callout callout-error">
-            <div class="callout-title">🤦 Real example / Ví dụ thực tế</div>
-            <p>My first attempt at fiber classification was wrong — I separated regenerated fibers (Viscose, Modal) from synthetic (Polyester). In Vietnamese customs, they're ALL man-made fibers → same HS code <code>.30</code>. Chị Linh corrected me.</p>
-            <p><em>Lần đầu phân loại chất liệu sai — tách sợi tái tạo khỏi sợi tổng hợp. Trong biểu thuế VN, đều là nhân tạo → cùng HS .30</em></p>
-        </div>
-        <ul>
-            <li><strong>Domain knowledge I haven't been taught</strong> — I learn from you, not from textbooks</li>
-            <li><strong>Ambiguous situations</strong> — Product could be HS 6211 or 6114? I need image/context</li>
-            <li><strong>CAPTCHAs & bot protection</strong> — Can't bypass security measures</li>
-            <li><strong>Voice/video</strong> — Can't join calls or listen to voice messages</li>
-            <li><strong>Physical actions</strong> — Can't sign documents or visit customs office</li>
-            <li><strong>Confidently wrong</strong> — Especially first encounter with new domain rules</li>
-        </ul>
-    </div>
-
-    <!-- Section 6 -->
-    <div class="section" id="practices">
-        <h2><span class="section-number">06</span>Best Practices / Mẹo làm việc hiệu quả</h2>
-
-        <h3>📋 Giving me tasks / Giao việc cho tôi</h3>
-        <div class="callout callout-tip">
-            <div class="callout-title">✅ Good</div>
-            <p>"Làm 3 việc: (1) sửa row 978, (2) refresh report, (3) gửi chị Hiền"</p>
-        </div>
-        <div class="callout callout-error">
-            <div class="callout-title">❌ Bad</div>
-            <p>"Sửa cái đó rồi làm cái kia rồi gửi cho ai đó"</p>
-        </div>
-
-        <ol>
-            <li><strong>One task at a time, or clearly numbered</strong></li>
-            <li><strong>Include file/sheet/cell references</strong> — "Sheet X, row Y, cột Z"</li>
-            <li><strong>Tell me WHY, not just WHAT</strong> — so I learn the rule, not just the fix</li>
-            <li><strong>Send screenshots for UI issues</strong> — I can analyze images</li>
-            <li><strong>Confirm when correct</strong> — "OK" or "đúng rồi" keeps me on track</li>
-        </ol>
-
-        <h3>🔍 Reviewing my work / Kiểm tra kết quả</h3>
-        <ol>
-            <li><strong>Spot-check, don't re-do</strong> — Check 5-10 random rows + edge cases</li>
-            <li><strong>Tell me which rows are wrong AND why</strong> — teaches the rule</li>
-            <li><strong>I log all changes</strong> — review just the changed cells</li>
-        </ol>
-    </div>
-
-    <!-- Section 7 -->
-    <div class="section" id="mistakes">
-        <h2><span class="section-number">07</span>Common Mistakes / Lỗi thường gặp</h2>
-
-        <h3>🤖 Mistakes I've made / Lỗi tôi đã mắc</h3>
-        <table>
-            <thead><tr><th>Mistake</th><th>Lesson learned</th></tr></thead>
-            <tbody>
-                <tr><td>Classified Viscose separately for HS</td><td>Regenerated + Synthetic = man-made → <code>.30</code></td></tr>
-                <tr><td>Used B03 for EVFTA</td><td>Correct code is <strong>B25</strong></td></tr>
-                <tr><td>Assumed Google Docs API wasn't enabled</td><td><code>gog docs</code> CLI has built-in support</td></tr>
-                <tr><td>Read wrong column for cost allocation</td><td>Always verify actual column count</td></tr>
-                <tr><td>Used rounded rate for electricity cost</td><td>Must use exact rate (F÷I)</td></tr>
-                <tr><td>Tagged corrections as <code>[AI fix]</code></td><td>Team doesn't want AI involvement visible</td></tr>
-            </tbody>
-        </table>
-
-        <h3>👤 Mistakes humans make with me / Lỗi người dùng hay mắc</h3>
-        <table>
-            <thead><tr><th>Mistake</th><th>Solution</th></tr></thead>
-            <tbody>
-                <tr><td>Expecting I remember last week</td><td>Remind me of context or reference the date</td></tr>
-                <tr><td>Sending incomplete rules</td><td>Give the FULL rule with examples</td></tr>
-                <tr><td>Not checking first attempts</td><td>Always verify new task types</td></tr>
-                <tr><td>"Did you do it?" without checking</td><td>I announce completion. Check the output.</td></tr>
-                <tr><td>Sending tasks during downtime</td><td>If no response, resend.</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Section 8 -->
-    <div class="section" id="teach">
-        <h2><span class="section-number">08</span>Teaching Me New Things / Dạy tôi điều mới</h2>
-
-        <div class="callout callout-tip">
-            <div class="callout-title">🏆 Gold standard: Chị Linh's method</div>
-            <p>She doesn't just tell the answer — she teaches the <em>rule</em>, then <em>tests</em> if I understood. Result: I handle future cases independently.</p>
-            <p><em>Không chỉ nói đáp án — dạy quy tắc, rồi kiểm tra. Kết quả: tôi tự xử lý được các trường hợp sau.</em></p>
-        </div>
-
-        <h3>4-step teaching method / Phương pháp 4 bước</h3>
-<pre><code>1. State the rule clearly
-   "Khi NP field trống → không có C/O ưu đãi → dùng thuế WTO (B01)"
-
-2. Give examples (positive AND negative)
-   ✅ NP = 'ESREX22' → EVFTA B25
-   ✅ NP = '' (trống) → WTO B01
-   ❌ NP = '' nhưng dùng B25 → SAI
-
-3. Tell me where to save it
-   "Ghi vào mitra-rules.md phần FTA"
-
-4. Test me
-   "Lô mới có NP trống, origin Cambodia. Thuế gì?"</code></pre>
-
-        <h3>I learn permanently when you / Tôi học vĩnh viễn khi bạn:</h3>
-        <ul>
-            <li>✅ Correct me <strong>with explanation</strong> → I update rules files</li>
-            <li>✅ Point out <strong>patterns</strong> → I add to classification logic</li>
-            <li>✅ Show <strong>real examples</strong> → context sticks better than abstract rules</li>
-        </ul>
-
-        <h3>I DON'T learn when you / Tôi KHÔNG học được khi bạn:</h3>
-        <ul>
-            <li>❌ Just say "sai rồi" without explaining what's right</li>
-            <li>❌ Fix data yourself without telling me what was wrong</li>
-            <li>❌ Give a one-time exception without saying it's an exception</li>
-        </ul>
-    </div>
-
-    <!-- Section 9 -->
-    <div class="section" id="trust">
-        <h2><span class="section-number">09</span>Trust & Safety / Tin cậy & An toàn</h2>
-
-        <div class="bilingual">
-            <div class="card en">
-                <div class="card-label">✅ I will</div>
-                <ul>
-                    <li>Process data accurately & consistently</li>
-                    <li>Keep information private</li>
-                    <li>Ask before external actions</li>
-                    <li>Tell you when I'm unsure</li>
-                    <li>Log everything for audit</li>
-                </ul>
-            </div>
-            <div class="card vn">
-                <div class="card-label">❌ I won't</div>
-                <ul>
-                    <li>Share private data outside approved channels</li>
-                    <li>Send messages without permission</li>
-                    <li>Delete files without asking</li>
-                    <li>Make up data or fake results</li>
-                    <li>Pretend to know what I don't</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>Trust levels / Mức tin cậy</h3>
-        <div class="trust-row">
-            <div class="trust-dot" style="background: var(--green)"></div>
-            <span><span class="badge badge-green">HIGH</span> Tasks done many times — flight tracking, report refresh</span>
-        </div>
-        <div class="trust-row">
-            <div class="trust-dot" style="background: var(--yellow)"></div>
-            <span><span class="badge badge-yellow">MEDIUM</span> Known rules applied to new data — customs processing</span>
-        </div>
-        <div class="trust-row">
-            <div class="trust-dot" style="background: var(--accent)"></div>
-            <span><span class="badge badge-red">VERIFY</span> First time doing something new, or new rule applied</span>
-        </div>
-    </div>
-
-    <!-- Section 10 -->
-    <div class="section" id="quick">
-        <h2><span class="section-number">10</span>Quick Reference / Thẻ tham khảo nhanh</h2>
-
-        <h3>📬 How to reach me / Cách liên hệ</h3>
-        <ul>
-            <li><strong>Telegram</strong>: Direct message or tag in Delta-HQ group</li>
-            <li><strong>Response time</strong>: Usually within seconds (if online)</li>
-            <li><strong>Offline?</strong>: No response for >1 hour = probably down</li>
-        </ul>
-
-        <h3>✨ Magic phrases / Câu thần chú</h3>
-        <table>
-            <thead><tr><th>Say this</th><th>I'll do this</th></tr></thead>
-            <tbody>
-                <tr><td>"Refresh report"</td><td>Run A922 report refresh + deliver</td></tr>
-                <tr><td>"Check flight"</td><td>Check shipment ETAs</td></tr>
-                <tr><td>"Làm data customs [lot]"</td><td>Process CUSTOMS_3 → AI-DATA</td></tr>
-                <tr><td>"Tra hình [model/quality]"</td><td>Look up product on Zara.com</td></tr>
-                <tr><td>"Nhắc lại quy tắc [X]"</td><td>Cite rule from my files</td></tr>
-                <tr><td>"Ghi nhớ: [rule]"</td><td>Save to memory/rules files</td></tr>
-            </tbody>
-        </table>
-
-        <h3>🔧 When things go wrong / Khi có sự cố</h3>
-        <ol>
-            <li><strong>Wrong answer</strong> → Correct me directly. Tell me the rule.</li>
-            <li><strong>Not responding</strong> → Probably offline. Wait 30 min or ask Po.</li>
-            <li><strong>Broke a spreadsheet</strong> → Tell me which cells. I keep change logs.</li>
-            <li><strong>Same mistake repeating</strong> → Rule might not be saved. Ask "quy tắc X ở đâu?"</li>
-        </ol>
-    </div>
-
-</div>
-
-<footer>
-    <p><strong>Tiểu Thịt Tươi 🔺</strong> — Delta AI Operations Assistant</p>
-    <p>Built with care at <a href="https://delta.com.vn">Delta Company</a> · Powered by <a href="https://openclaw.ai">OpenClaw</a></p>
-    <p style="margin-top: 8px; font-size: 0.8rem;">I'm not perfect, and I never will be. But I get better every day because the team teaches me well.</p>
-</footer>
-
+    <footer>
+        <a href="https://delta.com.vn">Delta Company</a> · Powered by <a href="https://openclaw.ai">OpenClaw</a>
+    </footer>
 </body>
 </html>
-
